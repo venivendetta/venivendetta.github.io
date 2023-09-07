@@ -24,6 +24,10 @@ header {
   padding: 15px;
 }
 
+.logo {
+  width: 225px;
+}
+
 /* Navigation Styles */
 nav {
   background-color: #00804A;
@@ -97,14 +101,14 @@ footer {
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  padding: 0 15%;  /* New: Add horizontal padding */
+  padding: 0 5%;  /* New: Add horizontal padding */
 }
 
 /* Frame and Image Styles */
 .frame-container {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 
 /* Middle Text Styles */
@@ -136,4 +140,27 @@ footer {
   object-fit: cover;  /* New: Resize and crop the image */
   object-position: center bottom;  /* New: Adjust the focus */
   overflow: hidden;
+}
+
+
+.text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://cdn.discordapp.com/attachments/429983945786916884/1149335383897808978/2b1015a-removebg-preview.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: auto;
+  margin: 0px auto;
+  text-align: center;
+}
+
+
+
+.inner-text {
+  text-align: center;
+  margin: 200px;
+  color: white;
+  /* Additional styles as needed */
 }

@@ -1,12 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://archives.bulbagarden.net/media/upload/f/fc/Unova_B2W2_alt.png');
-    background-size: cover; /* To cover the entire viewport */
-    background-repeat: no-repeat; /* To prevent the image from repeating */
-    background-attachment: fixed; /* To fix the background image in place */
-  }
+body, html {
+  background-image: url('https://cdn.discordapp.com/attachments/429983945786916884/1149352604355264672/Unova_B2W2_alt.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #f7b88f;
+}
   
   header {
     background-color: #00804A;
@@ -65,13 +66,14 @@ body {
   color: #8b9f72;
   padding: 1em;
   border: black;
+  border: 5px solid black;
 }
 
 /* ... (Existing styles) ... */
 
 /* Thick and visible border for blog posts */
 .blog-post {
-    border: 5px solid #8b9f72; /* Change the thickness and color as needed */
+    border: 5px solid black; /* Change the thickness and color as needed */
     position: relative; /* Needed for positioning corner images */
   }
   
@@ -158,10 +160,7 @@ body {
   transform: translate(50%, 50%); /* Center at the bottom-right corner */
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-  }
+
   
   .page-content {
     min-height: 100%;
@@ -208,3 +207,60 @@ body, html {
     margin: 2em 0;
   }
   
+  .text-block .inner-text {
+    /* Your styles here */
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+  }
+
+/* Existing styles remain the same */
+
+/* Corner images for Niko and Vi (top-left and bottom-right) */
+.blog-post.niko::before, .blog-post.niko::after,
+.blog-post.vi::before, .blog-post.vi::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png');
+}
+
+/* Top-left corner */
+.blog-post.niko::before, .blog-post.vi::before {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* Bottom-right corner */
+.blog-post.niko::after, .blog-post.vi::after {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+/* Additional corner images (top-right and bottom-left) */
+.blog-post.niko .top-right, .blog-post.vi .top-right,
+.blog-post.niko .bottom-left, .blog-post.vi .bottom-left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png');
+}
+
+/* Top-right corner */
+.blog-post.niko .top-right, .blog-post.vi .top-right {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* Bottom-left corner */
+.blog-post.niko .bottom-left, .blog-post.vi .bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
