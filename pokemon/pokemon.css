@@ -1,5 +1,6 @@
+/* Global Styles */
 body, html {
-  background-image: url('https://cdn.discordapp.com/attachments/429983945786916884/1149352604355264672/Unova_B2W2_alt.png') !important;
+  background-image: url('https://cdn.discordapp.com/attachments/429983945786916884/1149352604355264672/Unova_B2W2_alt.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,40 +9,37 @@ body, html {
   padding: 0;
   color: #f7b88f;
 }
-  
-  header {
-    background-color: #00804A;
-    color: #f7b88f;
-    text-align: center;
-    padding: 1em;
-  }
-  
-  main {
-    padding: 2em;
-  }
-  
-  h2, h3 {
-    color: #d22d32;
-  }
-  
-  .pokemon-img {
-    width: 200px;
-  }
-  
-  .catch-entry {
-    margin-bottom: 2em;
-  }
-  
-  footer {
-    background-color: #8b9f72;
-    color: #f7b88f;
-    text-align: center;
-    padding: 1em;
-  }
-  
-  /* ... (Common styles remain the same) ... */
 
-/* Dual Blog Layout */
+header, footer {
+  text-align: center;
+  padding: 1em;
+}
+
+header {
+  background-color: #00804A;
+  color: #f7b88f;
+}
+
+footer {
+  background-color: #8b9f72;
+  color: #f7b88f;
+}
+
+main {
+  padding: 2em;
+}
+
+h2, h3 {
+  color: #d22d32;
+}
+
+.page-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blog Styles */
 .dual-blog {
   display: flex;
   justify-content: space-between;
@@ -51,216 +49,85 @@ body, html {
 .blog-post {
   flex: 1;
   margin: 0 1em;
-}
-
-/* Niko's Blog Post Style */
-.blog-post.niko {
-  background-color: white;  /* Change as per your preference */
-  color: #f7b88f;
-  padding: 1em;
-}
-
-/* Vi's Blog Post Style */
-.blog-post.vi {
-  background-color: white;  /* Change as per your preference */
-  color: #8b9f72;
-  padding: 1em;
-  border: black;
   border: 5px solid black;
+  position: relative;
 }
 
-/* ... (Existing styles) ... */
-
-/* Thick and visible border for blog posts */
-.blog-post {
-    border: 5px solid black; /* Change the thickness and color as needed */
-    position: relative; /* Needed for positioning corner images */
-  }
-  
-  /* Add images to the corners of Niko's blog */
-  .blog-post.niko::before,
-  .blog-post.niko::after {
-    content: "";
-    position: absolute;
-    width: 50px; /* Image width */
-    height: 50px; /* Image height */
-    background-size: cover;
-  }
-  
-  .blog-post.niko::before {
-    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
-    top: 0;
-    left: 0;
-  }
-  
-  .blog-post.niko::after {
-    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
-    bottom: 0;
-    right: 0;
-  }
-  
-  /* Add images to the corners of Vi's blog */
-  .blog-post.vi::before,
-  .blog-post.vi::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-size: cover;
-  }
-  
-  .blog-post.vi::before {
-    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
-    top: 0;
-    left: 0;
-  }
-  
-  .blog-post.vi::after {
-    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
-    bottom: 0;
-    right: 0;
-  }
-  
-  /* ... (Existing styles) ... */
-
-/* Modify the corner images to be centered at each corner */
-.blog-post.niko::before,
-.blog-post.niko::after,
-.blog-post.vi::before,
-.blog-post.vi::after {
-  /* ... (Existing styles) ... */
-  transform: translate(-50%, -50%); /* Center the images */
+.blog-post.niko, .blog-post.vi {
+  background-color: white;
+  padding: 1em;
 }
 
-.blog-post.niko::before {
-  /* ... (Existing styles) ... */
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%); /* Center at the top-left corner */
+.blog-post.niko {
+  color: #f7b88f;
 }
 
-.blog-post.niko::after {
-  /* ... (Existing styles) ... */
-  bottom: 0;
-  right: 0;
-  transform: translate(50%, 50%); /* Center at the bottom-right corner */
+.blog-post.vi {
+  color: #8b9f72;
 }
 
-.blog-post.vi::before {
-  /* ... (Existing styles) ... */
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%); /* Center at the top-left corner */
+/* Pokedex View Styles */
+.pokedex-view {
+  background-color: white;
+  border: 0px;
+  overflow: visible;
 }
 
-.blog-post.vi::after {
-  /* ... (Existing styles) ... */
-  bottom: 0;
-  right: 0;
-  transform: translate(50%, 50%); /* Center at the bottom-right corner */
+.route {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.route-title {
+  font-size: calc(10px + 2vmin);
+  background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149390563246886963/DS_DSi_-_Pokemon_Platinum_-_Text_Box_Styles_1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;  /* Set the height */
+  display: flex;
+  align-items: center;  /* Center the text vertically */
+  justify-content: center;  /* Center the text horizontally */
 }
 
 
-  
-  .page-content {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .dual-blog {
-    flex: 1;
-  }
-  
-  footer {
-    background-color: #8b9f72;
-    color: #f7b88f;
-    text-align: center;
-    padding: 1em;
-  }
+.pokemon-list {
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  /* ... existing CSS ... */
-
-/* Pokémon Section */
-.pokemon-section {
-    text-align: center;
-    margin: 2em 0;
-  }
-  
-  .pokemon-img {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .pokemon-info {
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .pokemon-name,
-  .pokemon-level {
-    display: block;
-  }
-  
-  /* Note Section */
-  .note-section {
-    margin: 2em 0;
-  }
-  
-  .text-block .inner-text {
-    /* Your styles here */
-    text-align: center;
-    vertical-align: middle;
-    line-height: normal;
-  }
-
-/* Existing styles remain the same */
-
-/* Corner images for Niko and Vi (top-left and bottom-right) */
-.blog-post.niko::before, .blog-post.niko::after,
-.blog-post.vi::before, .blog-post.vi::after {
-  content: "";
-  position: absolute;
+.pokemon {
   width: 50px;
   height: 50px;
-  background-size: cover;
-  background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png');
+  background-image: url('https://cdn.discordapp.com/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png');
+  background-size: 75px 75px;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
-/* Top-left corner */
-.blog-post.niko::before, .blog-post.vi::before {
-  top: 0;
-  left: 0;
+.pokemon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  width: 50px;  /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
 }
 
-/* Bottom-right corner */
-.blog-post.niko::after, .blog-post.vi::after {
-  bottom: 0;
-  right: 0;
-  transform: translate(50%, 50%);
+/* Button Styles */
+button#toggleView {
+  background-color: #8b9f72;
+  color: #f7b88f;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-/* Additional corner images (top-right and bottom-left) */
-.blog-post.niko .top-right, .blog-post.vi .top-right,
-.blog-post.niko .bottom-left, .blog-post.vi .bottom-left {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png');
-}
-
-/* Top-right corner */
-.blog-post.niko .top-right, .blog-post.vi .top-right {
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
-}
-
-/* Bottom-left corner */
-.blog-post.niko .bottom-left, .blog-post.vi .bottom-left {
-  bottom: 0;
-  left: 0;
-  transform: translate(-50%, 50%);
+button#toggleView:hover {
+  background-color: #d22d32;
 }

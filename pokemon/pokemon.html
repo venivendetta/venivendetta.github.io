@@ -8,9 +8,11 @@
 <body>
   <header>
     <h1>Pokémon White 2 Randomized Race</h1>
+    <button id="toggleView">Toggle</button>
   </header>
-  <button id="toggleView">Switch to Pokedex View</button>
+  <div id="pokedexList"></div>
 
+<div id="blogView" class="page-content">
   <div class="page-content">
   <main class="dual-blog">
     <article class="blog-post niko">
@@ -20,7 +22,7 @@
 
    <!-- Pokémon Section -->
     <section class="pokemon-section">
-      <img src="pokemon_image_url_here.jpg" alt="Pokémon Image" class="pokemon-img">
+      <img class="pokemon-image" data-pokemon="Pikachu">
       <div class="pokemon-info">
         <span class="pokemon-name">Pikachu</span>
         <span class="pokemon-level">Level 10</span>
@@ -29,7 +31,7 @@
 
   <!-- Note Section -->
   <section class="note-section">
-    <p>This is a note from us. Here we'll document interesting events, thoughts, or tips related to our Pokémon journey.</p>
+    <p></p>
   </section>
 
 </article>
@@ -43,10 +45,17 @@
     </article>
   </main>
 </div>
-  <footer>
-    <p>Updated on: <span id="last-updated"></span></p>
-  </footer>
+</div>
 
+<!-- New Pokedex View -->
+<div id="pokedexView" style="display: none;">
+  <div id="routes">
+    <!-- Routes and Pokémon sprites will be dynamically inserted here -->
+  </div>
+</div>
+
+
+  <script src="pokemonDB.js"></script>
   <script src="pokemon.js"></script>
 </body>
 </html>

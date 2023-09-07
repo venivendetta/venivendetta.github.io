@@ -1,10 +1,9 @@
 const pokemonDatabase = {
-    "Pikachu": "path/to/pikachu_sprite.png",
-    "Rhydon": "path/to/rhydon_sprite.png",
+    "Pikachu": "https://www.pokencyclopedia.info/sprites/gen5/ani_black-white/ani_bw_025_m.gif",
     // ...
   };
 
   const locationDatabase = {
-    "Route 5": ["Rhydon", "Pachirisu", "Ledyba", "Oshawott"],
+    "Route 5": ["Pikachu", "Pikachu"],
     // ...
   };
