@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://archives.bulbagarden.net/media/upload/f/fc/Unova_B2W2_alt.png');
+    background-size: cover; /* To cover the entire viewport */
+    background-repeat: no-repeat; /* To prevent the image from repeating */
+    background-attachment: fixed; /* To fix the background image in place */
+  }
+  
+  header {
+    background-color: #00804A;
+    color: #f7b88f;
+    text-align: center;
+    padding: 1em;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  h2, h3 {
+    color: #d22d32;
+  }
+  
+  .pokemon-img {
+    width: 200px;
+  }
+  
+  .catch-entry {
+    margin-bottom: 2em;
+  }
+  
+  footer {
+    background-color: #8b9f72;
+    color: #f7b88f;
+    text-align: center;
+    padding: 1em;
+  }
+  
+  /* ... (Common styles remain the same) ... */
+
+/* Dual Blog Layout */
+.dual-blog {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.blog-post {
+  flex: 1;
+  margin: 0 1em;
+}
+
+/* Niko's Blog Post Style */
+.blog-post.niko {
+  background-color: white;  /* Change as per your preference */
+  color: #f7b88f;
+  padding: 1em;
+}
+
+/* Vi's Blog Post Style */
+.blog-post.vi {
+  background-color: white;  /* Change as per your preference */
+  color: #8b9f72;
+  padding: 1em;
+  border: black;
+}
+
+/* ... (Existing styles) ... */
+
+/* Thick and visible border for blog posts */
+.blog-post {
+    border: 5px solid #8b9f72; /* Change the thickness and color as needed */
+    position: relative; /* Needed for positioning corner images */
+  }
+  
+  /* Add images to the corners of Niko's blog */
+  .blog-post.niko::before,
+  .blog-post.niko::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Image width */
+    height: 50px; /* Image height */
+    background-size: cover;
+  }
+  
+  .blog-post.niko::before {
+    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
+    top: 0;
+    left: 0;
+  }
+  
+  .blog-post.niko::after {
+    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* Add images to the corners of Vi's blog */
+  .blog-post.vi::before,
+  .blog-post.vi::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+  }
+  
+  .blog-post.vi::before {
+    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
+    top: 0;
+    left: 0;
+  }
+  
+  .blog-post.vi::after {
+    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149131232546934824/pngkey.com-pokeball-png-356244.png'); /* Change to your image URL */
+    bottom: 0;
+    right: 0;
+  }
+  
+  /* ... (Existing styles) ... */
+
+/* Modify the corner images to be centered at each corner */
+.blog-post.niko::before,
+.blog-post.niko::after,
+.blog-post.vi::before,
+.blog-post.vi::after {
+  /* ... (Existing styles) ... */
+  transform: translate(-50%, -50%); /* Center the images */
+}
+
+.blog-post.niko::before {
+  /* ... (Existing styles) ... */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); /* Center at the top-left corner */
+}
+
+.blog-post.niko::after {
+  /* ... (Existing styles) ... */
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%); /* Center at the bottom-right corner */
+}
+
+.blog-post.vi::before {
+  /* ... (Existing styles) ... */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%); /* Center at the top-left corner */
+}
+
+.blog-post.vi::after {
+  /* ... (Existing styles) ... */
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%); /* Center at the bottom-right corner */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dual-blog {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #8b9f72;
+    color: #f7b88f;
+    text-align: center;
+    padding: 1em;
+  }
+
+  /* ... existing CSS ... */
+
+/* Pokémon Section */
+.pokemon-section {
+    text-align: center;
+    margin: 2em 0;
+  }
+  
+  .pokemon-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .pokemon-info {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .pokemon-name,
+  .pokemon-level {
+    display: block;
+  }
+  
+  /* Note Section */
+  .note-section {
+    margin: 2em 0;
+  }
+  

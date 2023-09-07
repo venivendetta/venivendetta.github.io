@@ -1,48 +1,139 @@
-body {
-    background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149045826153369620/MZkpgUWYkkdJLmRzX1tiqfYqXLF9u483XfXjA13kQquO11uYCkoZZsyjqummSupMGYaSXraXtlLgPEAXdejrguc5vd7buEfvBBQ4F9BPsCA2BaNADQoY0GtQ1do0CnRGAQN6ZwtiwzEK1KCAAb0GVa1No0BnFDCgd7YgNhyjQA0KGNBrUNXaNAp0RgEDemcLYsMxCtSggAG9BlWtTaNAZxT4f1zku2LvkoJaAAAAAElFTkSuQmCC.png');
-    background-repeat: repeat;
-    color: #f7b88f;
-  }
+/* Global Styles */
+body, html {
+  background-color: #00804A;
+  background-image: url('https://media.discordapp.net/attachments/429983945786916884/1149045826153369620/MZkpgUWYkkdJLmRzX1tiqfYqXLF9u483XfXjA13kQquO11uYCkoZZsyjqummSupMGYaSXraXtlLgPEAXdejrguc5vd7buEfvBBQ4F9BPsCA2BaNADQoY0GtQ1do0CnRGAQN6ZwtiwzEK1KCAAb0GVa1No0BnFDCgd7YgNhyjQA0KGNBrUNXaNAp0RgEDemcLYsMxCtSggAG9BlWtTaNAZxT4f1zku2LvkoJaAAAAAElFTkSuQmCC.png');
+  background-repeat: repeat;
+  color: #f7b88f;
+  font-family: 'RocketPop', sans-serif;
+  font-size: large;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  header {
-    text-align: center;
-    padding: 15px;
-  }
-  nav {
-    background-color: #00804A;
-    text-align: center;
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  nav ul li a {
-    color: #f7b88f;
-    text-decoration: none;
-  }
-  nav ul li a:hover {
-    color: #8b9f72;
-  }
-  main {
-    text-align: center;
-    padding: 15px;
-  }
-  button {
-    background-color: #8b9f72;
-    color: #f7b88f;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #d22d32;
-  }
-  footer {
-    text-align: center;
-    padding: 15px;
-  }
+/* Font Styles */
+@font-face {
+  font-family: 'RocketPop';
+  src: url('rocketpop.otf') format('opentype'),
+       url('Mostera.otf') format('otf');
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #00804A;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: #f7b88f;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #8b9f72;
+}
+
+/* Main Content Styles */
+main {
+  position: relative; /* New */
+  text-align: center;
+  height: calc(100vh - 105px);  /* Adjusted to leave room for header and footer */
+}
+
+/* Button Styles */
+button {
+  background-color: #8b9f72;
+  color: #f7b88f;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #d22d32;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #d22d32;
+  padding: 15px;
+  text-align: center;
+  height: 45px;
+}
+
+
+.frame, .framed-image-left, .frame-image-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.frame-text-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Frame Wrapper */
+.frame-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;  /* New: Add horizontal padding */
+}
+
+/* Frame and Image Styles */
+.frame-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+/* Middle Text Styles */
+.middle-text {
+  flex-grow: 1;
+  text-align: center;
+  align-self: center;
+}
+
+.framed-image-left {
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;  /* New: Resize and crop the image */
+  object-position: center top;  /* New: Adjust the focus */
+}
+
+.framed-image-right {
+  z-index: -1;
+  position: absolute;
+  top: 40px; /* up down*/
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;  /* New: Resize and crop the image */
+  object-position: center bottom;  /* New: Adjust the focus */
+  overflow: hidden;
+}
