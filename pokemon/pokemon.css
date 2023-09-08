@@ -1,6 +1,6 @@
 /* Global Styles */
 body, html {
-  background-image: url('https://cdn.discordapp.com/attachments/429983945786916884/1149352604355264672/Unova_B2W2_alt.png');
+  background-image: url('https://archives.bulbagarden.net/media/upload/thumb/6/64/JohtoMap.png/1200px-JohtoMap.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -130,4 +130,9 @@ button#toggleView {
 
 button#toggleView:hover {
   background-color: #d22d32;
+}
+
+.note-section, .pokemon-info{
+  color: black;
+  font-size: large;
 }
