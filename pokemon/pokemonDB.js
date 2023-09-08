@@ -18,10 +18,10 @@ const pokemonDatabase = {
   };
 
   const locationDatabase = {
-    "Route 29": ["Pidgey", "Sentret"],
-    "Route 46": ["Spearow", "Rattata"],
-    "Route 30": ["Weedle", "Kakuna", "Spearow", "Pidgey"],
+    "Dark Cave": ["Zubat", "Geodude"],
     "Route 31": ["Weedle", "Pidgey"],
-    "Dark Cave": ["Zubat", "Geodude"]
+    "Route 30": ["Weedle", "Kakuna", "Spearow", "Pidgey"],
+    "Route 46": ["Spearow", "Rattata"],
+    "Route 29": ["Pidgey", "Sentret"],
     // ...
   };
